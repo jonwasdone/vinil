@@ -22,26 +22,25 @@ export const SettingsPage = ({ onBack }: SettingsPageProps) => {
   const [activeCategory, setActiveCategory] = useState('quality');
 
   return (
-    <div className="flex-1 flex overflow-hidden" style={{ paddingBottom: '120px' }}>
+    <div className="flex-1 flex overflow-hidden">
       {/* Settings Sidebar */}
       <div
-        className="w-64 flex-shrink-0 flex flex-col"
+        className="flex flex-col self-stretch"
         style={{
+          width: '240px',
           background: 'var(--bg-secondary)',
           borderRight: '1px solid var(--border-default)',
         }}
       >
-        <div className="p-6 pb-4">
+        <div className="flex items-center gap-3 p-6">
           <button
             onClick={onBack}
-            className="flex items-center gap-2 px-3 py-2 rounded-md transition-colors w-full"
+            className="flex items-center gap-2 transition-colors"
             style={{ color: 'var(--text-secondary)' }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'var(--bg-tertiary)';
               e.currentTarget.style.color = 'var(--text-primary)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'transparent';
               e.currentTarget.style.color = 'var(--text-secondary)';
             }}
           >
@@ -50,39 +49,40 @@ export const SettingsPage = ({ onBack }: SettingsPageProps) => {
           </button>
         </div>
 
-        <nav className="flex-1 px-3 space-y-1">
+        <nav className="flex-1 space-y-1 relative">
           {settingsCategories.map((category) => {
             const isActive = activeCategory === category.id;
             return (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className="w-full flex items-center px-3 py-2.5 rounded-md text-left transition-all relative"
-                style={{
-                  background: isActive ? 'var(--bg-tertiary)' : 'transparent',
-                  color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
-                }}
-                onMouseEnter={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.background = 'var(--bg-tertiary)';
-                    e.currentTarget.style.color = 'var(--text-primary)';
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.background = 'transparent';
-                    e.currentTarget.style.color = 'var(--text-secondary)';
-                  }
-                }}
-              >
+              <div key={category.id} className="relative px-3">
+                <button
+                  onClick={() => setActiveCategory(category.id)}
+                  className="w-full flex items-center gap-3 px-3 py-3 rounded-md text-left transition-all"
+                  style={{
+                    background: isActive ? 'var(--bg-tertiary)' : 'transparent',
+                    color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.background = 'var(--bg-tertiary)';
+                      e.currentTarget.style.color = 'var(--text-primary)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.background = 'transparent';
+                      e.currentTarget.style.color = 'var(--text-secondary)';
+                    }
+                  }}
+                >
+                  <span className="text-sm font-medium">{category.label}</span>
+                </button>
                 {isActive && (
                   <div
-                    className="absolute -left-3 top-0 bottom-0 w-1 rounded-r"
+                    className="absolute left-0 top-0 bottom-0 w-1 rounded-r"
                     style={{ background: 'var(--accent-primary)' }}
                   />
                 )}
-                <span className="text-sm font-medium">{category.label}</span>
-              </button>
+              </div>
             );
           })}
         </nav>
