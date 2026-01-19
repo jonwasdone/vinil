@@ -1,11 +1,36 @@
+# Vinil
 
-  # Personal Music Streaming App
+A personal music streaming desktop application built with Tauri and React.
 
-  This is a code bundle for Personal Music Streaming App. The original project is available at https://www.figma.com/design/aroyjs6gZBdBsx4ULiFc37/Personal-Music-Streaming-App.
+## Features
 
-  ## Running the code
+- Browse and play your music collection
+- Beautiful vinyl-inspired interface
+- Upload and organize your music library
+- Create and manage playlists
+- Search functionality
+- Now Playing view with album artwork
 
-  Run `npm i` to install the dependencies.
+## Tech Stack
 
-  Run `npm run dev` to start the development server.
-  
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Desktop**: Tauri (Rust)
+- **UI Components**: Radix UI, shadcn/ui
+- **Icons**: Lucide React
+
+## Running the code
+
+Install the dependencies:
+```bash
+npm i
+```
+
+Start the development server:
+```bash
+npm run dev
+```
+
+Build the Tauri desktop app:
+```bash
+npm run tauri:build
+```

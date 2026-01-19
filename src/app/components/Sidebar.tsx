@@ -36,7 +36,7 @@ export const Sidebar = ({ currentPage, onNavigate }: SidebarProps) => {
           <Disc3 className="w-6 h-6" style={{ color: 'var(--text-on-accent)' }} />
         </div>
         <span className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-          VinylStream
+          Vinil
         </span>
       </div>
 
