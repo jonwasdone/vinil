@@ -149,7 +149,7 @@ export const SearchPage = ({ onNavigateToAlbum }: SearchPageProps) => {
                 <h3 className="mb-4" style={{ color: 'var(--text-primary)' }}>
                   Albums
                 </h3>
-                <div className="grid grid-cols-5 gap-4">
+                <div className="grid grid-cols-5 gap-4 p-2">
                   {filteredAlbums.map((album) => (
                     <AlbumCard
                       key={album.id}

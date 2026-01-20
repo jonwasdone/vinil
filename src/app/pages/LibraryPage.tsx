@@ -97,7 +97,7 @@ export const LibraryPage = ({ onNavigateToAlbum }: LibraryPageProps) => {
       {/* Content */}
       <div className="flex-1 overflow-y-auto px-8">
         {viewMode === 'grid' ? (
-          <div className="grid grid-cols-5 gap-4 pb-8">
+          <div className="grid grid-cols-5 gap-4 p-2 pb-8">
             {mockAlbums.map((album) => (
               <AlbumCard
                 key={album.id}

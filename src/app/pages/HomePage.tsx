@@ -144,7 +144,7 @@ export const HomePage = ({ onNavigateToAlbum }: HomePageProps) => {
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
-        <div className="grid grid-cols-6 gap-4">
+        <div className="grid grid-cols-6 gap-4 p-2">
           {recentlyPlayed.map((album) => (
             <AlbumCard
               key={album.id}
@@ -174,7 +174,7 @@ export const HomePage = ({ onNavigateToAlbum }: HomePageProps) => {
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-5 gap-4 p-2">
           {recentlyAdded.map((album) => (
             <AlbumCard
               key={album.id}
