@@ -77,15 +77,6 @@ export const Sidebar = ({ currentPage, onNavigate }: SidebarProps) => {
                 }
               }}
             >
-              {isActive && (
-                <div
-                  className="absolute left-0 top-0 bottom-0 w-1 rounded-r"
-                  style={{
-                    background: 'var(--accent-primary)',
-                    boxShadow: '0 0 10px rgba(245, 166, 35, 0.6)',
-                  }}
-                />
-              )}
               <div className={`transition-all ${isActive ? 'scale-110' : 'scale-100'} group-hover:scale-110`}>
                 <Icon
                   className="w-5 h-5"

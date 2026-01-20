@@ -36,7 +36,7 @@ export const mockAlbums: Album[] = [
   {
     id: 'album-1',
     title: 'Midnight Dreams',
-    artist: 'Luna Rhodes',
+    artist: 'Tame Impala',
     artworkUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=400&fit=crop',
     year: 2023,
     genre: 'Electronic',
@@ -159,7 +159,7 @@ export const mockTracks: Track[] = [
   {
     id: 'track-1',
     title: 'Ethereal Dreams',
-    artist: 'Luna Rhodes',
+    artist: 'Tame Impala',
     album: 'Midnight Dreams',
     albumId: 'album-1',
     duration: 245,
@@ -171,7 +171,7 @@ export const mockTracks: Track[] = [
   {
     id: 'track-2',
     title: 'Neon Lights',
-    artist: 'Luna Rhodes',
+    artist: 'Tame Impala',
     album: 'Midnight Dreams',
     albumId: 'album-1',
     duration: 198,

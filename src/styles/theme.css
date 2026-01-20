@@ -168,6 +168,16 @@
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.5;
+    cursor: pointer;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  [role="button"],
+  [onclick] {
+    cursor: pointer;
   }
 
   input {

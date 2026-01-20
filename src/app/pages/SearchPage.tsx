@@ -13,7 +13,7 @@ export const SearchPage = ({ onNavigateToAlbum }: SearchPageProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<'all' | 'albums' | 'tracks' | 'artists'>('all');
 
-  const recentSearches = ['Luna Rhodes', 'Electronic', 'Jazz'];
+  const recentSearches = ['Tame Impala', 'Electronic', 'Jazz'];
 
   const filteredAlbums = mockAlbums.filter(
     (album) =>
